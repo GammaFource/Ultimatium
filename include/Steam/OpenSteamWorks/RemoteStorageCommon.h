@@ -1,0 +1,81 @@
+//==========================  Open Steamworks  ================================
+//
+// This file is part of the Open Steamworks project. All individuals associated
+// with this project do not claim ownership of the contents
+// 
+// The code, comments, and all related files, projects, resources,
+// redistributables included with this project are Copyright Valve Corporation.
+// Additionally, Valve, the Valve logo, Half-Life, the Half-Life logo, the
+// Lambda logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo,
+// Opposing Force, Day of Defeat, the Day of Defeat logo, Counter-Strike, the
+// Counter-Strike logo, Source, the Source logo, and Counter-Strike Condition
+// Zero are trademarks and or registered trademarks of Valve Corporation.
+// All other trademarks are property of their respective owners.
+//
+//=============================================================================
+
+#ifndef REMOTESTORAGECOMMON_H
+#define REMOTESTORAGECOMMON_H
+#ifdef _WIN32
+#pragma once
+#endif
+
+
+
+#define STEAMREMOTESTORAGE_INTERFACE_VERSION_001 "STEAMREMOTESTORAGE_INTERFACE_VERSION001"
+#define STEAMREMOTESTORAGE_INTERFACE_VERSION_002 "STEAMREMOTESTORAGE_INTERFACE_VERSION002"
+#define STEAMREMOTESTORAGE_INTERFACE_VERSION_003 "STEAMREMOTESTORAGE_INTERFACE_VERSION003"
+#define STEAMREMOTESTORAGE_INTERFACE_VERSION_004 "STEAMREMOTESTORAGE_INTERFACE_VERSION004"
+
+#define CLIENTREMOTESTORAGE_INTERFACE_VERSION "CLIENTREMOTESTORAGE_INTERFACE_VERSION001"
+
+
+
+typedef enum ERemoteStorageFileRoot
+{
+	k_ERemoteStorageFileRootInvalid = 0,
+	k_ERemoteStorageFileRootDefault,
+	k_ERemoteStorageFileRootMax
+} ERemoteStorageFileRoot;
+
+typedef enum ERemoteStorageSyncState
+{
+	k_ERemoteSyncStateUnknown = 0,
+	k_ERemoteSyncStateSynchronized = 1,
+	k_ERemoteSyncStateSyncInProgress = 2,
+	k_ERemoteSyncStatePendingChangesInCloud = 3,
+	k_ERemoteSyncStatePendingChangesLocally = 4,
+	k_ERemoteSyncStatePendingChangesInCloudAndLocally = 5,
+} ERemoteStorageSyncState;
+
+typedef enum EScreenshotPrivacyState
+{
+	k_EScreenshotPrivacyStatePrivate = 2,
+	k_EScreenshotPrivacyStateFriendsOnly = 4,
+	k_EScreenshotPrivacyStatePublic = 8,
+} EScreenshotPrivacyState;
+
+
+#pragma pack( push, 8 )
+struct FileShareResult_t
+{ 
+	enum { k_iCallback = k_iClientRemoteStorageCallbacks + 7 };
+
+	int32 unk1;
+	int32 unk2;
+	int32 unk3;
+	int32 unk4;
+};
+
+struct ScreenshotBatchResult_t
+{ 
+	enum { k_iCallback = k_iClientRemoteStorageCallbacks + 12 };
+
+	EResult m_eResult;
+};
+
+#pragma pack( pop )
+
+
+
+#endif // REMOTESTORAGECOMMON_H

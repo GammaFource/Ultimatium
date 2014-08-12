@@ -1,0 +1,104 @@
+﻿Build started 4/25/2014 11:56:00 PM.
+     1>Project "C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\SteamAPI.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>PreBuildEvent:
+         rev.bat
+         :VCEnd
+         'SubWCRev' is not recognized as an internal or external command,
+         operable program or batch file.
+         Project at revision 
+       ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Iinclude /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D CLIENTDLL_EXPORTS /D _WINDLL /EHa /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /TP /wd4996 /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /analyze- /errorReport:prompt PatchCommands.cpp PatchT5Branding.cpp PatchUIStrings.cpp source\Common\Log.cpp source\Game\Patches\GamePatches.cpp source\Steam\APIExports.cpp source\Steam\Interfaces\SteamApps003.cpp source\Steam\Interfaces\SteamFriends007.cpp source\Steam\Interfaces\SteamGameServer010.cpp source\Steam\Interfaces\SteamMasterServerUpdater001.cpp source\Steam\Interfaces\SteamUser014.cpp source\Steam\Interfaces\SteamUserStats007.cpp source\Steam\SteamAPI.cpp source\Steam\SteamCommon.cpp source\main.cpp /clr:nostdlib 
+         PatchCommands.cpp
+     1>c:\users\bill\desktop\gammaforcesource codes\ultimatium\steamapi\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 c:\users\bill\desktop\gammaforcesource codes\ultimatium\steamapi\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         PatchT5Branding.cpp
+     1>c:\users\bill\desktop\gammaforcesource codes\ultimatium\steamapi\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 c:\users\bill\desktop\gammaforcesource codes\ultimatium\steamapi\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         PatchUIStrings.cpp
+     1>c:\users\bill\desktop\gammaforcesource codes\ultimatium\steamapi\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 c:\users\bill\desktop\gammaforcesource codes\ultimatium\steamapi\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         Log.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         GamePatches.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5) : see previous definition of 'VTILIB'
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+     1>source\Game\Patches\GamePatches.cpp(45): warning C4244: 'return' : conversion from 'VultrotID_t' to 'int', possible loss of data
+         APIExports.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5) : see previous definition of 'VTILIB'
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         SteamApps003.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         SteamFriends007.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         SteamGameServer010.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5) : see previous definition of 'VTILIB'
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+     1>source\Steam\Interfaces\SteamGameServer010.cpp(29): warning C4244: 'argument' : conversion from 'VultrotID_t' to 'uint32', possible loss of data
+         SteamMasterServerUpdater001.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         SteamUser014.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         SteamUserStats007.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         SteamAPI.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         SteamCommon.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5) : see previous definition of 'VTILIB'
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+     1>source\Steam\SteamCommon.cpp(12): warning C4244: 'argument' : conversion from 'VultrotID_t' to 'uint32', possible loss of data
+     1>source\Steam\SteamCommon.cpp(51): warning C4244: 'argument' : conversion from 'VultrotID_t' to 'uint32', possible loss of data
+         main.cpp
+     1>C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(5): warning C4005: 'VTILIB' : macro redefinition
+                 C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\VTILib.h(4) : see previous definition of 'VTILIB'
+         Generating Code...
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\NemOps\steam_api.dll" /NOLOGO /LIBPATH:lib zlib.lib ssleay32.lib libeay32.lib credui.lib wldap32.lib ws2_32.lib winmm.lib shlwapi.lib VTI++.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:libcmt.lib /MANIFEST /ManifestFile:"Release\steam_api.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"G:\NemOps\steam_api.pdb" /SUBSYSTEM:WINDOWS /LTCG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Release\PatchCommands.obj
+         Release\PatchT5Branding.obj
+         Release\PatchUIStrings.obj
+         Release\main.obj
+         Release\Log.obj
+         Release\GamePatches.obj
+         Release\APIExports.obj
+         Release\SteamAPI.obj
+         Release\SteamCommon.obj
+         Release\SteamApps003.obj
+         Release\SteamFriends007.obj
+         Release\SteamGameServer010.obj
+         Release\SteamMasterServerUpdater001.obj
+         Release\SteamUser014.obj
+         Release\SteamUserStats007.obj
+         "Release\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+            Creating library G:\NemOps\steam_api.lib and object G:\NemOps\steam_api.exp
+         LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+         SteamAPI.vcxproj -> G:\NemOps\steam_api.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"G:\NemOps\steam_api.dll;#2" /manifest Release\steam_api.dll.intermediate.manifest
+     1>Done Building Project "C:\Users\Bill\Desktop\GammaForceSource codes\Ultimatium\SteamAPI\trunk\SteamAPI.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:21.36

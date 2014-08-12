@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommand>F:\nOps Test\revops\BlackOpsMPgame.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerWorkingDirectory>..\..\..\..\..\..\..\..\nOps Test\revops</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommand>G:\NemOps\BlackOpsMPsrver.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>G:\NemOps</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>+set dedicated 1 +set sv_licensenum 0 +set net_port 27960 +exec server.cfg +map mp_nuked</LocalDebuggerCommandArguments>
+  </PropertyGroup>
+</Project>

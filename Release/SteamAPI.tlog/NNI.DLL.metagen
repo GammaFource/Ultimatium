@@ -1,0 +1,983 @@
+  NNI.Forms.ChatWindow.resources - Embedded, ContainedInManifestFile, 
+  NNI.Forms.FindFriend.resources - Embedded, ContainedInManifestFile, 
+  NNI.Forms.LoginForm.resources - Embedded, ContainedInManifestFile, 
+  NNI.Forms.Main.resources - Embedded, ContainedInManifestFile, 
+  NNI.Properties.Resources.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly NNI, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class NNI.Forms.ChatManager: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    AddWindow(FriendInfo): PrivateScope, Public, Static, HideBySig
+    ChatOpenned(Int64): PrivateScope, Public, Static, HideBySig
+    CloseChat(Int64): PrivateScope, Public, Static, HideBySig
+    Close(): PrivateScope, Public, Static, HideBySig
+    UpdateFriendOnlineStatus(Int64, Int32): PrivateScope, Public, Static, HideBySig
+    UpdateFriendStatus(Int64, FriendInfo): PrivateScope, Public, Static, HideBySig
+    IncomingMessage(Int64, String): PrivateScope, Public, Static, HideBySig
+    OfflineMessage(Int64, String, Int64): PrivateScope, Public, Static, HideBySig
+    StopChat(Int64): PrivateScope, Public, Static, HideBySig
+    RemoveWindow(ChatWindow): PrivateScope, Public, Static, HideBySig
+Class NNI.Forms.ChatWindow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean started : Public
+    NotifyMessage normalNotify : Public
+    NotifyOfflineMessage offlineNotify : Public
+    UpdateFriendInfo updateFriendInfo : Public
+    UpdateFriendStatus updateFriendStatus : Public
+    GetFriendInfo getFriendInfo : Public
+    FormClose formClose : Public
+  Methods:
+    DelegatedFormClose(): PrivateScope, Public, HideBySig
+    DelegatedGetFriendInfo(): PrivateScope, Public, HideBySig
+    DelegatedUpdateFriendStatus(Int32): PrivateScope, Public, HideBySig
+    DelegatedUpdateFriendInfo(FriendInfo): PrivateScope, Public, HideBySig
+    DelegatedNotifyMessage(String): PrivateScope, Public, HideBySig
+    DelegatedOfflineNotifyMessage(String, Int64): PrivateScope, Public, HideBySig
+    ExternalNotifyMessage(String): PrivateScope, Public, HideBySig
+    ExternalOfflineNotifyMessage(String, Int64): PrivateScope, Public, HideBySig
+    ExternalUpdateFriendInfo(FriendInfo): PrivateScope, Public, HideBySig
+    ExternalUpdateFriendStatus(Int32): PrivateScope, Public, HideBySig
+    ExternalGetFriendInfo(): PrivateScope, Public, HideBySig
+    ExternalFormClose(): PrivateScope, Public, HideBySig
+Class NNI.Forms.ChatWindow+NotifyMessage: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NNI.Forms.ChatWindow+NotifyOfflineMessage: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String, Int64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(String, Int64, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NNI.Forms.ChatWindow+UpdateFriendInfo: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(FriendInfo): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(FriendInfo, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NNI.Forms.ChatWindow+UpdateFriendStatus: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NNI.Forms.ChatWindow+GetFriendInfo: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NNI.Forms.ChatWindow+FormClose: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NNI.Forms.FindFriend: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class NNI.Forms.LoginForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class NNI.Forms.Main: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UpdateFriendsList updateFriends : Public
+    CloseForm closeForm : Public
+    Int64 fuserID : Public
+    System.Windows.Forms.ContextMenuStrip contextMenuStrip1 : Public
+    System.Windows.Forms.ListBox listBox1 : Public
+  Methods:
+    ExternalCloseForm(): PrivateScope, Public, HideBySig
+    RunRightClickMenu(): PrivateScope, Public, HideBySig
+    ExternalUpdateFriendsList(Boolean): PrivateScope, Public, HideBySig
+    CheckVersionExchange(DemonWareVersionExchange): PrivateScope, Public, Static, HideBySig
+Class NNI.Forms.Main+UpdateFriendsList: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Boolean, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NNI.Forms.Main+CloseForm: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NNI.Friends: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    IsFriend(Int64): PrivateScope, Public, Static, HideBySig
+    IsFriendOnline(Int64): PrivateScope, Public, Static, HideBySig
+    GetFriendName(Int64): PrivateScope, Public, Static, HideBySig
+    GetFriendById(Int32): PrivateScope, Public, Static, HideBySig
+    GetFriendCount(): PrivateScope, Public, Static, HideBySig
+Class NNI.NNIMain: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Int32 ToStartGame : Public, Static
+    Int32 OfflineHoster : Public, Static
+    Boolean LastLoginFailed : Public, Static
+  Properties:
+    System.String AccountName 'get set' : 
+    System.String SessionID 'get set' : 
+    Int64 ClientID 'get set' : 
+    System.String Server 'get set' : 
+    System.String ClanTag 'get set' : 
+    Int64 ClanID 'get set' : 
+    System.String ClanName 'get set' : 
+    Int64 CACServerID 'get set' : 
+    Boolean UseEncryption 'get set' : 
+    Byte[] EncryptionKey 'get set' : 
+    System.String EncryptionMethod 'get set' : 
+    Byte[] EncryptionIv 'get set' : 
+    Boolean ServerStatus 'get set' : 
+    NNI.Forms.Main MainInterface 'get set' : 
+  Methods:
+    Init(Boolean): PrivateScope, Public, Static, HideBySig
+    Stop(): PrivateScope, Public, Static, HideBySig
+    VersionCheckDone(): PrivateScope, Public, Static, HideBySig
+    VersionOk(): PrivateScope, Public, Static, HideBySig
+    DisplayLogin(): PrivateScope, Public, Static, HideBySig
+    DisplayMainInterface(): PrivateScope, Public, Static, HideBySig
+    BanUser(Int32): PrivateScope, Public, Static, HideBySig
+    StartDedicated(): PrivateScope, Public, Static, HideBySig
+    SetUsercount(Int32): PrivateScope, Public, Static, HideBySig
+    GetUsercount(): PrivateScope, Public, Static, HideBySig
+    get_AccountName(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_AccountName(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SessionID(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_SessionID(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ClientID(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_ClientID(Int64): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Server(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_Server(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ClanTag(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_ClanTag(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ClanID(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_ClanID(Int64): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ClanName(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_ClanName(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_CACServerID(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_CACServerID(Int64): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_UseEncryption(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_UseEncryption(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_EncryptionKey(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_EncryptionKey(Byte[]): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_EncryptionMethod(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_EncryptionMethod(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_EncryptionIv(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_EncryptionIv(Byte[]): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ServerStatus(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MainInterface(): PrivateScope, Public, Static, HideBySig, SpecialName
+Class NSLib.Constants: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Double NSVersion : Public, Static
+    Int64 NSBuild : Public, Static
+    Int64 DWServerBirthday : Public, Static
+    System.String DWServerMagic : Public, Static
+Class NSLib.Log: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Boolean enabled : Public, Static
+    Int32 logqueue : Public, Static
+    System.String file : Public, Static
+  Methods:
+    Init(String, LogLevel): PrivateScope, Public, Static, HideBySig
+    Init(String): PrivateScope, Public, Static, HideBySig
+    Send(LogLevel, ConsoleColor, String, String, String): PrivateScope, Public, Static, HideBySig
+    Debug(String, String): PrivateScope, Public, Static, HideBySig
+    Error(String, String): PrivateScope, Public, Static, HideBySig
+    Warning(String, String): PrivateScope, Public, Static, HideBySig
+    Info(String, String): PrivateScope, Public, Static, HideBySig
+    Trace(String, String): PrivateScope, Public, Static, HideBySig
+    Stop(): PrivateScope, Public, Static, HideBySig
+    FileLog(String): PrivateScope, Public, Static, HideBySig
+Struct NSLib.Log+LogLevel: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    LogLevel None = 0 : Public, Static, Literal, HasDefault
+    LogLevel Debug = 1 : Public, Static, Literal, HasDefault
+    LogLevel Error = 2 : Public, Static, Literal, HasDefault
+    LogLevel Warning = 4 : Public, Static, Literal, HasDefault
+    LogLevel Info = 8 : Public, Static, Literal, HasDefault
+    LogLevel Trace = 16 : Public, Static, Literal, HasDefault
+    LogLevel All = 31 : Public, Static, Literal, HasDefault
+Class NSLib.Network.DisconnectException: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class NSLib.Network.Packets.DemonWareVersionExchange: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int64 birthday : Public
+    System.String magic : Public
+  Methods:
+    Encode(): PrivateScope, Public, HideBySig
+    Decode(PyObject): PrivateScope, Public, HideBySig
+Class NSLib.Network.Packets.VersionExchange: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double version : Public
+    Int64 build : Public
+    System.Collections.Generic.List`1[System.String] macAddress : Public
+    Int32 usercount : Public
+  Methods:
+    Encode(): PrivateScope, Public, HideBySig
+    Decode(PyObject): PrivateScope, Public, HideBySig
+Class NSLib.Network.StreamPacketizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    QueuePackets(Byte[], Int32): PrivateScope, Public, HideBySig
+    ProcessPackets(): PrivateScope, Public, HideBySig
+    PopItem(): PrivateScope, Public, HideBySig
+    ClearPackets(): PrivateScope, Public, HideBySig
+Class NSLib.Network.TCPSocket: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(UInt16, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(NSLib.Network.TCPSocket, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Net.Sockets.Socket, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Available 'get ' : 
+    Boolean Blocking 'get set' : 
+    System.Net.Sockets.Socket Socket 'get set' : 
+  Methods:
+    Connect(String, Boolean(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    Listen(Int32): PrivateScope, Public, HideBySig
+    Accept(): PrivateScope, Public, HideBySig
+    Close(): PrivateScope, Public, HideBySig
+    IsConnected(): PrivateScope, Public, HideBySig
+    Port(): PrivateScope, Public, HideBySig
+    Recv(Byte[]): PrivateScope, Public, HideBySig
+    Send(Byte[]): PrivateScope, Public, HideBySig
+    GetAddress(): PrivateScope, Public, HideBySig
+    get_Available(): PrivateScope, Public, HideBySig, SpecialName
+    get_Blocking(): PrivateScope, Public, HideBySig, SpecialName
+    set_Blocking(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Socket(): PrivateScope, Public, HideBySig, SpecialName
+Class NSLib.Services.Base.Service: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetServiceName(): PrivateScope, Public, HideBySig
+    AddServiceCall(ServiceCall): PrivateScope, Public, HideBySig
+    DelServiceCall(String): PrivateScope, Public, HideBySig
+    FindServiceCall(String): PrivateScope, Public, HideBySig
+    GetServiceCall(String): PrivateScope, Public, HideBySig
+    Call(String, PyTuple, Object): PrivateScope, Public, HideBySig
+Class NSLib.Services.Base.ServiceCall: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetCallName(): PrivateScope, Public, HideBySig
+    Run(PyTuple, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NSLib.Services.Base.ServiceManager: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddService(Service): PrivateScope, Public, HideBySig
+    FindService(String): PrivateScope, Public, HideBySig
+    DelService(String): PrivateScope, Public, HideBySig
+    GetService(String): PrivateScope, Public, HideBySig
+    Call(String, String, PyTuple, Object): PrivateScope, Public, HideBySig
+Struct NSLib.Types.AccountStatus: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    NSLib.Types.AccountStatus onlineBit = 1 : Public, Static, Literal, HasDefault
+    NSLib.Types.AccountStatus bannedBit = 2 : Public, Static, Literal, HasDefault
+    NSLib.Types.AccountStatus playingBit = 4 : Public, Static, Literal, HasDefault
+    NSLib.Types.AccountStatus onMenuBit = 8 : Public, Static, Literal, HasDefault
+    NSLib.Types.AccountStatus onServerBit = 16 : Public, Static, Literal, HasDefault
+Struct NSLib.Types.FriendInfo: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String name : Public
+    Int32 friendshipStatus : Public
+    Int32 accountStatus : Public
+    Int64 userID : Public
+Class NSLib.Types.LeaderboardEntry: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int64 userID : Public
+    Int32 detailsCount : Public
+    Int32 score : Public
+    Int64 entryID : Public
+    Int32[] details : Public
+Struct NSLib.Types.MessageInfo: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int64 fromID : Public
+    Int64 toID : Public
+    Int64 time : Public
+    System.String message : Public
+Struct NSLib.Types.ServerInfo: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String name : Public
+    Int32 friendshipStatus : Public
+    Int32 accountStatus : Public
+    Int64 userID : Public
+Class NNI.PacketQueue: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    InputPacket(PyObject): PrivateScope, Public, Static, HideBySig
+    WaitForPacket(Int64): PrivateScope, Public, Static, HideBySig
+    FindNotify(Int64): PrivateScope, Public, Static, HideBySig
+    WaitForNotify(Int64): PrivateScope, Public, Static, HideBySig
+    ClearPackets(): PrivateScope, Public, Static, HideBySig
+Class PythonMarshal.Compression: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Compress(Byte[]): PrivateScope, Public, Static, HideBySig
+    Decompress(Byte[]): PrivateScope, Public, Static, HideBySig
+Class PythonMarshal.Crypto: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Decrypt(Byte[], Byte[], Byte[]): PrivateScope, Public, Static, HideBySig
+    Encrypt(Byte[], Byte[], Byte[]): PrivateScope, Public, Static, HideBySig
+Struct PythonMarshal.Database.FieldType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    PythonMarshal.Database.FieldType Empty = 0 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType Null = 1 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType I2 = 2 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType I4 = 3 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType R4 = 4 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType R8 = 5 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType CY = 6 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType Error = 10 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType Bool = 11 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType I1 = 16 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType UI1 = 17 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType UI2 = 18 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType UI4 = 19 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType I8 = 20 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType UI8 = 21 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType FileTime = 64 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType Bytes = 128 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType Str = 129 : Public, Static, Literal, HasDefault
+    PythonMarshal.Database.FieldType WStr = 130 : Public, Static, Literal, HasDefault
+Class PythonMarshal.Database.FieldTypeHelper: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    GetTypeBytes(FieldType): PrivateScope, Public, Static, HideBySig
+    GetTypeBits(FieldType): PrivateScope, Public, Static, HideBySig
+Class PythonMarshal.Macho: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+Struct PythonMarshal.Macho+MachoNetMsg_Type: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    MachoNetMsg_Type AUTHENTICATION_REQ = 0 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type AUTHENTICATION_RSP = 1 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type IDENTIFICATION_REQ = 2 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type IDENTIFICATION_RSP = 3 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type __Fake_Invalid_Type = 4 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type CALL_REQ = 6 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type CALL_RSP = 7 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type TRANSPORTCLOSED = 8 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type RESOLVE_REQ = 10 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type RESOLVE_RSP = 11 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type NOTIFICATION = 12 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type ERRORRESPONSE = 15 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type SESSIONCHANGENOTIFICATION = 16 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type SESSIONINITIALSTATENOTIFICATION = 18 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type PING_REQ = 20 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type PING_RSP = 21 : Public, Static, Literal, HasDefault
+    MachoNetMsg_Type MACHONETMSG_TYPE_COUNT = 22 : Public, Static, Literal, HasDefault
+Class PythonMarshal.Marshal: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Process(PyObject): PrivateScope, Public, Static, HideBySig
+    Tuple(PyObject[]): PrivateScope, Public, Static, HideBySig
+    Dict(Object[]): PrivateScope, Public, Static, HideBySig
+Class PythonMarshal.MarshalOptions: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean Checksum 'get set' : 
+  Methods:
+    get_Checksum(): PrivateScope, Public, HideBySig, SpecialName
+    set_Checksum(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class PythonMarshal.MarshalAs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(PythonMarshal.MarshalOpcode): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    PythonMarshal.MarshalOpcode Opcode 'get set' : 
+  Methods:
+    get_Opcode(): PrivateScope, Public, HideBySig, SpecialName
+Class PythonMarshal.MarshalData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PutHeader(): PrivateScope, Public, HideBySig
+    GetData(): PrivateScope, Public, HideBySig
+    PutTuple(Int32): PrivateScope, Public, HideBySig
+    PutList(Int32): PrivateScope, Public, HideBySig
+    PutDictionary(Int32): PrivateScope, Public, HideBySig
+    PutPair(T, U): PrivateScope, Public, HideBySig
+    Put(T): PrivateScope, Public, HideBySig
+    PutNone(): PrivateScope, Public, HideBySig
+    Put(Single): PrivateScope, Public, HideBySig
+    Put(Double): PrivateScope, Public, HideBySig
+    Put(Byte): PrivateScope, Public, HideBySig
+    Put(Int64): PrivateScope, Public, HideBySig
+    Put(Int16): PrivateScope, Public, HideBySig
+    Put(UInt32): PrivateScope, Public, HideBySig
+    Put(Int32): PrivateScope, Public, HideBySig
+    Put(String): PrivateScope, Public, HideBySig
+    Put(Byte[]): PrivateScope, Public, HideBySig
+Struct PythonMarshal.MarshalOpcode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    PythonMarshal.MarshalOpcode Error = 0 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode None = 1 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode Token = 2 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode IntegerLongLong = 3 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode IntegerLong = 4 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode IntegerSignedShort = 5 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode IntegerByte = 6 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode IntegerMinusOne = 7 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode IntegerZero = 8 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode IntegerOne = 9 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode Real = 10 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode RealZero = 11 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode Buffer = 13 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode StringEmpty = 14 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode StringChar = 15 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode StringShort = 16 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode StringTable = 17 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode WStringUCS2 = 18 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode StringLong = 19 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode Tuple = 20 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode List = 21 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode Dict = 22 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode Object = 23 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode SubStruct = 25 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode SavedStreamElement = 27 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode ChecksumedStream = 28 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode BoolTrue = 31 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode BoolFalse = 32 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode ObjectEx1 = 34 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode ObjectEx2 = 35 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode TupleEmpty = 36 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode TupleOne = 37 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode ListEmpty = 38 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode ListOne = 39 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode WStringEmpty = 40 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode WStringUCS2Char = 41 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode PackedRow = 42 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode SubStream = 43 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode TupleTwo = 44 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode WStringUTF8 = 46 : Public, Static, Literal, HasDefault
+    PythonMarshal.MarshalOpcode IntegerVar = 47 : Public, Static, Literal, HasDefault
+Class PythonMarshal.PrettyPrinter: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String Indention =    : Public, Static, Literal, HasDefault
+  Methods:
+    Print(PyObject): PrivateScope, Public, Static, HideBySig
+Class PythonMarshal.PyAddress: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    AddrType type : Public
+    UInt64 typeID : Public
+    System.String call : Public
+    UInt64 callID : Public
+    System.String service : Public
+  Methods:
+    Decode(PyObject): PrivateScope, Public, HideBySig
+    Encode(): PrivateScope, Public, HideBySig
+Struct PythonMarshal.PyAddress+AddrType: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    AddrType Any = 65 : Public, Static, Literal, HasDefault
+    AddrType Server = 83 : Public, Static, Literal, HasDefault
+    AddrType Client = 67 : Public, Static, Literal, HasDefault
+    AddrType Invalid = 73 : Public, Static, Literal, HasDefault
+Class PythonMarshal.PyObject: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Fields:
+    Boolean EnableInspection : Public, Static
+  Properties:
+    Byte[] RawSource 'get set' : 
+    Int64 RawOffset 'get set' : 
+    PythonMarshal.PyObjectType Type 'get set' : 
+    PythonMarshal.PyObject Item [Int32] 'get set' : 
+    PythonMarshal.PyObject Item [System.String] 'get set' : 
+    Double FloatValue 'get ' : 
+    System.String StringValue 'get ' : 
+    Int64 IntValue 'get ' : 
+  Methods:
+    get_RawSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_RawSource(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    get_RawOffset(): PrivateScope, Public, HideBySig, SpecialName
+    set_RawOffset(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    As(): PrivateScope, Public, HideBySig
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Encode(BinaryWriter): PrivateScope, Public, HideBySig
+    get_Item(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Item(Int32, PyObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Item(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Item(String, PyObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_FloatValue(): PrivateScope, Public, HideBySig, SpecialName
+    get_StringValue(): PrivateScope, Public, HideBySig, SpecialName
+    get_IntValue(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyBool: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean Value 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyBuffer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte[] Data 'get set' : 
+    Byte[] Buffer 'get set' : 
+  Methods:
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Buffer(): PrivateScope, Public, HideBySig, SpecialName
+Class PythonMarshal.PyChecksumedStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(PythonMarshal.PyObject): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    UInt32 Checksum 'get set' : 
+    PythonMarshal.PyObject Data 'get set' : 
+    PythonMarshal.PyObject Stream 'get set' : 
+  Methods:
+    get_Checksum(): PrivateScope, Public, HideBySig, SpecialName
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    get_Stream(): PrivateScope, Public, HideBySig, SpecialName
+Class PythonMarshal.PyDict: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Collections.Generic.Dictionary`2[System.String,PythonMarshal.PyObject]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.Dictionary`2[System.String,PythonMarshal.PyObject] Dictionary 'get set' : 
+    PythonMarshal.PyObject Item [System.String] 'get set' : 
+    System.Collections.Generic.Dictionary`2[System.String,PythonMarshal.PyObject] Items 'get set' : 
+    Int32 Count 'get set' : 
+  Methods:
+    get_Dictionary(): PrivateScope, Public, HideBySig, SpecialName
+    Get(String): PrivateScope, Public, HideBySig
+    Set(String, PyObject): PrivateScope, Public, HideBySig
+    Contains(String): PrivateScope, Public, HideBySig
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    get_Item(String): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Item(String, PyObject): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Items(): PrivateScope, Public, HideBySig, SpecialName
+    set_Items(Dictionary`2): PrivateScope, Public, HideBySig, SpecialName
+    get_Count(): PrivateScope, Public, HideBySig, SpecialName
+Class PythonMarshal.PyException: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String reason : Public
+    System.String ex_type : Public
+    Int32 type : Public
+    System.Collections.Generic.Dictionary`2[System.String,PythonMarshal.PyObject] extraInfo : Public
+  Methods:
+    Decode(PyObject): PrivateScope, Public, HideBySig
+    Encode(): PrivateScope, Public, HideBySig
+Class PythonMarshal.PyFloat: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Value 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyInt: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Value 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyIntegerVar: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int16): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte[] Raw 'get set' : 
+    Int32 Value 'get ' : 
+  Methods:
+    get_Raw(): PrivateScope, Public, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyList: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Collections.Generic.List`1[PythonMarshal.PyObject]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.Generic.IEnumerable`1[PythonMarshal.PyObject]
+    System.Collections.IEnumerable
+  Properties:
+    System.Collections.Generic.List`1[PythonMarshal.PyObject] Items 'get set' : 
+  Methods:
+    get_Items(): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyLongLong: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int64 Value 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyNone: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyObjectData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, PythonMarshal.PyObject): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Name 'get set' : 
+    PythonMarshal.PyObject Arguments 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Arguments(): PrivateScope, Public, HideBySig, SpecialName
+    set_Arguments(PyObject): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyObjectEx: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(Boolean, PythonMarshal.PyObject): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsType2 'get set' : 
+    PythonMarshal.PyObject Header 'get set' : 
+    System.Collections.Generic.Dictionary`2[PythonMarshal.PyObject,PythonMarshal.PyObject] Dictionary 'get set' : 
+    System.Collections.Generic.List`1[PythonMarshal.PyObject] List 'get set' : 
+  Methods:
+    get_IsType2(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsType2(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Header(): PrivateScope, Public, HideBySig, SpecialName
+    set_Header(PyObject): PrivateScope, Public, HideBySig, SpecialName
+    get_Dictionary(): PrivateScope, Public, HideBySig, SpecialName
+    get_List(): PrivateScope, Public, HideBySig, SpecialName
+    set_List(List`1): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+Struct PythonMarshal.PyObjectType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    PythonMarshal.PyObjectType Tuple = 0 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType String = 1 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType Bool = 2 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType None = 3 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType Token = 4 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType Float = 5 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType LongLong = 6 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType Long = 7 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType SignedShort = 8 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType Byte = 9 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType Buffer = 10 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType List = 11 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType Dict = 12 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType ObjectData = 13 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType SubStream = 14 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType ChecksumedStream = 15 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType IntegerVar = 16 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType ObjectEx = 17 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType PackedRow = 18 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType SubStruct = 19 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType RawData = 20 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType Int = 21 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyObjectType ChecksumedBuffer = 22 : Public, Static, Literal, HasDefault
+Class PythonMarshal.PyPacket: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    PythonMarshal.PyTuple payload : Public
+    System.String service : Public
+    System.String call : Public
+    Int64 callID : Public
+    Int64 type : Public
+  Methods:
+    Decode(PyObject): PrivateScope, Public, HideBySig
+    Encode(): PrivateScope, Public, HideBySig
+Class PythonMarshal.PyRawData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte[] Data 'get set' : 
+  Methods:
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    set_Data(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyString: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Value 'get set' : 
+    Byte[] Raw 'get set' : 
+    Boolean ForceUTF8 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    get_Raw(): PrivateScope, Public, HideBySig, SpecialName
+    get_ForceUTF8(): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PySubStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(PythonMarshal.PyObject): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte[] RawData 'get set' : 
+    PythonMarshal.PyObject Data 'get set' : 
+    PythonMarshal.Unmarshal DataUnmarshal 'get set' : 
+  Methods:
+    get_RawData(): PrivateScope, Public, HideBySig, SpecialName
+    set_RawData(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    set_Data(PyObject): PrivateScope, Public, HideBySig, SpecialName
+    get_DataUnmarshal(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataUnmarshal(Unmarshal): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PySubStruct: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    PythonMarshal.PyObject Definition 'get set' : 
+  Methods:
+    get_Definition(): PrivateScope, Public, HideBySig, SpecialName
+    set_Definition(PyObject): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyToken: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte[] RawToken 'get set' : 
+    System.String Token 'get set' : 
+  Methods:
+    get_RawToken(): PrivateScope, Public, HideBySig, SpecialName
+    set_RawToken(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Token(): PrivateScope, Public, HideBySig, SpecialName
+    set_Token(String): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+Class PythonMarshal.PyTuple: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PythonMarshal.PyObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Collections.Generic.List`1[PythonMarshal.PyObject]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.Generic.IEnumerable`1[PythonMarshal.PyObject]
+    System.Collections.IEnumerable
+  Properties:
+    System.Collections.Generic.List`1[PythonMarshal.PyObject] Items 'get set' : 
+    PythonMarshal.PyObject Item [Int32] 'get set' : 
+  Methods:
+    get_Items(): PrivateScope, Public, HideBySig, SpecialName
+    Decode(Unmarshal, MarshalOpcode, BinaryReader): PrivateScope, Public, Virtual, HideBySig
+    get_Item(Int32): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Item(Int32, PyObject): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct PythonMarshal.PyType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    PythonMarshal.PyType Int = 0 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType Bool = 1 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType Long = 2 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType List = 3 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType Tuple = 4 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType Dict = 5 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType ObjectData = 6 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType String = 7 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType None = 8 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType Buffer = 9 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType ChecksumedStream = 10 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType Float = 11 : Public, Static, Literal, HasDefault
+    PythonMarshal.PyType ChecksumedBuffer = 12 : Public, Static, Literal, HasDefault
+Class PythonMarshal.StringTable: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.Collections.Generic.List`1[System.String] Entries : Public, Static
+Class PythonMarshal.Unmarshal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Byte SaveMask = 64 : Public, Static, Literal, HasDefault
+    Byte UnknownMask = 128 : Public, Static, Literal, HasDefault
+    Byte HeaderByte = 126 : Public, Static, Literal, HasDefault
+    Byte ZlibMarker = 120 : Public, Static, Literal, HasDefault
+    Byte OpcodeMask = 63 : Public, Static, Literal, HasDefault
+  Properties:
+    Boolean DebugMode 'get set' : 
+    Boolean NeedObjectEx 'get set' : 
+    System.Collections.Generic.Dictionary`2[System.Int32,System.Int32] SavedElementsMap 'get set' : 
+    PythonMarshal.PyObject[] SavedElements 'get set' : 
+  Methods:
+    get_DebugMode(): PrivateScope, Public, HideBySig, SpecialName
+    set_DebugMode(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_NeedObjectEx(): PrivateScope, Public, HideBySig, SpecialName
+    set_NeedObjectEx(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_SavedElementsMap(): PrivateScope, Public, HideBySig, SpecialName
+    get_SavedElements(): PrivateScope, Public, HideBySig, SpecialName
+    Process(Byte[]): PrivateScope, Public, HideBySig
+    ReadObject(BinaryReader): PrivateScope, Public, HideBySig
+    Process(Byte[]): PrivateScope, Public, Static, HideBySig
+Class PythonMarshal.Utility: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    ToBigEndian(UInt32): PrivateScope, Public, Static, HideBySig
+    ToBigEndian(UInt16): PrivateScope, Public, Static, HideBySig
+    StringToByteArray(String): PrivateScope, Public, Static, HideBySig
+    ByteArrayToString(Byte[]): PrivateScope, Public, Static, HideBySig
+    ReadFully(Stream, Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    ReadFully(Stream, Byte[]): PrivateScope, Public, Static, HideBySig
+    ReadSizeEx(BinaryReader): PrivateScope, Public, Static, HideBySig
+    WriteSizeEx(BinaryWriter, UInt32): PrivateScope, Public, Static, HideBySig
+    WriteSizeEx(BinaryWriter, Int32): PrivateScope, Public, Static, HideBySig
+    HexDump(Byte[]): PrivateScope, Public, Static, HideBySig
+    ReadAllBytes(Stream): PrivateScope, Public, Static, HideBySig
+Class PythonMarshal.Zlib: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Decompress(Byte[]): PrivateScope, Public, Static, HideBySig
+    Compress(Byte[]): PrivateScope, Public, Static, HideBySig
+Class PythonMarshal.Adler32: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Checksum(Byte[]): PrivateScope, Public, Static, HideBySig
+Class PythonMarshal.Crc32: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Checksum(Byte[]): PrivateScope, Public, Static, HideBySig
+Class PythonMarshal.ZeroCompressOpcode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Byte): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Byte FirstLength : Public
+    Boolean FirstIsZero : Public
+    Byte SecondLength : Public
+    Boolean SecondIsZero : Public
+Class NNI.Services.AuthorizationService: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String username : Public, Static
+    System.String password : Public, Static
+    Boolean ToLogin : Public, Static
+    Boolean LastLoginFailed : Public, Static
+    Boolean RememberLogin : Public, Static
+    System.String banstring : Public, Static
+    System.String banreason : Public, Static
+    System.String hwid : Public, Static
+  Methods:
+    SteamAPIVersionCheck(): PrivateScope, Public, Static, HideBySig
+    LoginTry(): PrivateScope, Public, Static, HideBySig
+Class NNI.Services.ChatService: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    SendMessage(FriendInfo, String): PrivateScope, Public, Static, HideBySig
+    Start(): PrivateScope, Public, Static, HideBySig
+    Stop(): PrivateScope, Public, Static, HideBySig
+Class NNI.Services.ClanService: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    GetClanName(Int64): PrivateScope, Public, Static, HideBySig
+    GetClanTag(Int64): PrivateScope, Public, Static, HideBySig
+    GetClanCount(): PrivateScope, Public, Static, HideBySig
+    IsUserInClan(Int64): PrivateScope, Public, Static, HideBySig
+Class NNI.Services.FriendsService: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Boolean FriendRequest : Public, Static
+  Methods:
+    AddFriend(Int64): PrivateScope, Public, Static, HideBySig
+    AcceptFriend(Int64): PrivateScope, Public, Static, HideBySig
+    DeclineFriend(Int64): PrivateScope, Public, Static, HideBySig
+    GetUserName(Int64): PrivateScope, Public, Static, HideBySig
+    FindUser(String): PrivateScope, Public, Static, HideBySig
+    IsUserInList(Int64): PrivateScope, Public, Static, HideBySig
+    IsUserOnline(Int64): PrivateScope, Public, Static, HideBySig
+    GetFriendName(Int64): PrivateScope, Public, Static, HideBySig
+    GetFriendById(Int32): PrivateScope, Public, Static, HideBySig
+    GetFriendCount(): PrivateScope, Public, Static, HideBySig
+    GetFriendInfoById(Int64): PrivateScope, Public, Static, HideBySig
+    GetFriendList(Boolean): PrivateScope, Public, Static, HideBySig
+    GetFriendsCountByClan(Int64): PrivateScope, Public, Static, HideBySig
+    GetFriendsCountByServer(Int64): PrivateScope, Public, Static, HideBySig
+    GetFriendFromClanByIndex(Int32, Int64): PrivateScope, Public, Static, HideBySig
+    GetFriendFromServerByIndex(Int32, Int64): PrivateScope, Public, Static, HideBySig
+    IsFriendInServer(Int64, Int64): PrivateScope, Public, Static, HideBySig
+    IsFriendInClan(Int64, Int64): PrivateScope, Public, Static, HideBySig
+    IsFriendInAnyServer(Int64): PrivateScope, Public, Static, HideBySig
+    GetFriendServerID(Int64): PrivateScope, Public, Static, HideBySig
+    NotifyServerJoin(Int64, String): PrivateScope, Public, Static, HideBySig
+    NotifyServerLeft(): PrivateScope, Public, Static, HideBySig
+    Start(): PrivateScope, Public, Static, HideBySig
+    Stop(): PrivateScope, Public, Static, HideBySig
+Class NNI.Services.LeaderboardsService: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    GetLeaderboardsEntryCount(Int64): PrivateScope, Public, Static, HideBySig
+    DownloadLeaderboardsEntries(Int64, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    FindLeaderboard(String): PrivateScope, Public, Static, HideBySig
+    CreateLeaderboard(String): PrivateScope, Public, Static, HideBySig
+    AddLeaderboardEntry(Int64, Int32, Int32[], Int32): PrivateScope, Public, Static, HideBySig
+    GetLeaderboardName(Int64): PrivateScope, Public, Static, HideBySig
+    GetLeaderboardEntry(Int64, Int64): PrivateScope, Public, Static, HideBySig
+Class NNI.Services.NetworkService: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Properties:
+    Boolean VersionOk 'get set' : 
+    Boolean VersionCheckDone 'get set' : 
+  Methods:
+    get_VersionOk(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_VersionCheckDone(): PrivateScope, Public, Static, HideBySig, SpecialName
+    Init(): PrivateScope, Public, Static, HideBySig
+    Stop(): PrivateScope, Public, Static, HideBySig
+    SendLowLevelVersionExchange(): PrivateScope, Public, Static, HideBySig
+    Run(): PrivateScope, Public, Static, HideBySig
+    TimeoutRun(): PrivateScope, Public, Static, HideBySig
+    BuildServiceCall(String, String): PrivateScope, Public, Static, HideBySig
+    RemoteSvcCallCreate(String, String, PyTuple): PrivateScope, Public, Static, HideBySig
+    RemoteSvcCall(String, String, PyTuple, Boolean(Optional, HasDefault)): PrivateScope, Public, Static, HideBySig
+    IsConnected(): PrivateScope, Public, Static, HideBySig
+Class NNI.Services.ServersService: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Start(): PrivateScope, Public, Static, HideBySig
+    Stop(): PrivateScope, Public, Static, HideBySig
